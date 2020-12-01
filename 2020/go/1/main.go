@@ -208,19 +208,22 @@ func main() {
 
 	var a int
 	var b int
+	var c int
 
-	for i, num := range input {
-		fmt.Println(num)
-		for j, num2 := range input {
-			fmt.Println(num + num2)
-			if num+num2 == 2020 {
-				a = num
-				b = num2
-				fmt.Println("found it", i, j, num*num2)
+	for _, num := range input {
+
+		for _, num2 := range input {
+
+			for _, num3 := range input {
+
+				if num+num2+num3 == 2020 {
+					a = num
+					b = num2
+					c = num3
+				}
 			}
 		}
-
 	}
-	fmt.Println(a, b)
-	fmt.Println(a * b)
+	fmt.Println(a, b, c)
+	fmt.Println(a * b * c)
 }
